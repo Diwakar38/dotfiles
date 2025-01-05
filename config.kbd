@@ -1,0 +1,33 @@
+;; defsrc is still necessary
+(defcfg
+  process-unmapped-keys yes
+)
+
+(defsrc
+  caps a s d f h j k l ;
+)
+(defvar
+  tap-time 110
+  hold-time 200
+)
+
+(defalias
+  escctrl (tap-hold 100 100 esc lctl)
+  a (tap-hold $tap-time $hold-time a lalt)
+  s (tap-hold $tap-time $hold-time s lctl)
+  d (tap-hold $tap-time $hold-time d rsft)
+  f (tap-hold $tap-time $hold-time f lmet)
+  j (tap-hold $tap-time $hold-time j rmet)
+  k (tap-hold $tap-time $hold-time k rsft)
+  l (tap-hold $tap-time $hold-time l rctl)
+  ; (tap-hold $tap-time $hold-time ; ralt)
+  nav (layer-toggle nav)  ;; new alias for navigation layer
+)
+
+(deflayer base
+  @nav @a @s @d @f h @j @k @l @;
+)
+
+(deflayer nav
+  _ _ _ _ _ left down up right _
+)
