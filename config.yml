@@ -1,0 +1,13 @@
+modmap:
+  - remap:
+      CapsLock: esc
+
+keymap:
+  - remap:
+      Leftshift-h: Left
+      Leftshift-l: right
+      Leftshift-j: down
+      Leftshift-k: up
+      Leftshift-Comma: BackSpace
+      Leftshift-Dot: Delete
+      
